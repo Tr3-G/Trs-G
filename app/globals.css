@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0b294f;
+  --primary: #67b32f;
+  --secondary: #0b294f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #ffffff;
+  color: #0b294f;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
