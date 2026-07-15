@@ -28,7 +28,14 @@ import {
   ChevronRight,
   Sparkles,
   Search,
-  ArrowUpRight
+  ArrowUpRight,
+  Award,
+  Clock,
+  HeartHandshake,
+  Database,
+  Handshake,
+  Network,
+  Cpu
 } from "lucide-react";
 
 // Import HeroUI v3 components directly
@@ -346,8 +353,67 @@ export default function HomePage() {
               </div>
             </section>
 
-            {/* WHY TEAMS CHOOSE US */}
-            <section className="py-20 bg-white">
+            {/* WHY TEAMS CHOOSE US (UPGRADED SECTION with Why Choose Us Cards) */}
+            <section className="py-24 bg-white border-t border-gray-50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div className="text-center max-w-3xl mx-auto space-y-4 mb-20">
+                  <span className="text-xs font-black tracking-widest text-[#67b32f] uppercase">The TR3-G Advantage</span>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0b294f] tracking-tight">
+                    Why Choose TR3-G Innovations?
+                  </h2>
+                  <p className="text-gray-500 font-semibold text-lg">
+                    We deliver clean, secure, and modern digital backbones tailored to solve legacy challenges.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                  {[
+                    {
+                      icon: <Award className="w-8 h-8 text-[#67b32f]" />,
+                      title: "Proven Administrative Excellence",
+                      desc: "Strategic partnerships with Ogun State OGIRS and federal ministries prove our software architecture handles complex governance collections, document vaults, and student security frameworks flawlessly."
+                    },
+                    {
+                      icon: <Clock className="w-8 h-8 text-[#67b32f]" />,
+                      title: "Continuous 24/7 SLA Performance",
+                      desc: "Our high-tier operational hub coordinates distributed software engineering cohorts, assuring absolute uptime, rapid patch deployment, and real-time security scanning."
+                    },
+                    {
+                      icon: <HeartHandshake className="w-8 h-8 text-[#67b32f]" />,
+                      title: "Deep Technical Integration",
+                      desc: "We don't provide rigid pre-built templates. We build bespoke full-stack ecosystems mapped around your custom security layers, billing structures, and offline procedures."
+                    },
+                    {
+                      icon: <Database className="w-8 h-8 text-[#67b32f]" />,
+                      title: "Silicon-Level Security",
+                      desc: "Zero-trust environments utilizing robust cryptographic verification to safeguard and archive proprietary documents, identity actions, and database streams seamlessly."
+                    }
+                  ].map((card, idx) => (
+                    <div
+                      key={idx}
+                      className="p-8 rounded-3xl bg-gray-50/50 border border-gray-100 hover:border-[#67b32f]/20 hover:bg-white hover:shadow-xl hover:shadow-[#0b294f]/5 transition-all duration-300 flex flex-col sm:flex-row gap-6 text-left"
+                    >
+                      <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0 border border-gray-100">
+                        {card.icon}
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className="text-xl font-bold text-[#0b294f]">
+                          {card.title}
+                        </h3>
+                        <p className="text-sm text-gray-500 leading-relaxed font-semibold">
+                          {card.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </section>
+
+            {/* PROCESS MAP */}
+            <section className="py-20 bg-gray-50/30">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -385,7 +451,7 @@ export default function HomePage() {
                   ].map((item, idx) => (
                     <div
                       key={idx}
-                      className="group p-8 rounded-3xl bg-white border border-gray-100 hover:border-[#67b32f]/30 hover:shadow-xl hover:shadow-gray-100 transition-all duration-300 space-y-6"
+                      className="group p-8 rounded-3xl bg-white border border-gray-100 hover:border-[#67b32f]/30 hover:shadow-xl hover:shadow-gray-100 transition-all duration-300 space-y-6 text-left"
                     >
                       <div className="w-12 h-12 rounded-2xl bg-gray-50 group-hover:bg-[#67b32f]/10 flex items-center justify-center transition-all">
                         {item.icon}
@@ -393,110 +459,13 @@ export default function HomePage() {
                       <h3 className="text-xl font-bold text-[#0b294f] group-hover:text-[#67b32f] transition-all">
                         {item.title}
                       </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">
+                      <p className="text-sm text-gray-500 leading-relaxed font-semibold">
                         {item.desc}
                       </p>
                     </div>
                   ))}
                 </div>
 
-              </div>
-            </section>
-
-            {/* PREVIEW PARTNERS CAROUSEL / LOGO TAPE */}
-            <section className="py-12 bg-gray-50/50 border-y border-gray-100 overflow-hidden">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-xs font-black text-gray-400 tracking-widest uppercase mb-8">
-                  Trusted by Global Alliances & Innovation Ecosystems
-                </p>
-                <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-75">
-                  {partners.slice(0, 6).map((partner, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center gap-2 px-4 py-2 bg-white rounded-xl border border-gray-100 shadow-sm cursor-pointer hover:border-[#67b32f]/30 transition-all"
-                      onClick={() => handleTabChange("partners")}
-                    >
-                      <span className="w-6 h-6 rounded-md bg-[#0b294f] flex items-center justify-center text-[10px] font-black text-[#67b32f]">
-                        {partner.logoText.slice(0, 2)}
-                      </span>
-                      <span className="font-extrabold text-sm text-[#0b294f]">{partner.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* FEATURED CASE / PORTAL CALLOUT */}
-            <section className="py-20 bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-[#0b294f] rounded-3xl overflow-hidden shadow-2xl relative">
-
-                  {/* Background Accents */}
-                  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#67b32f]/10 blur-[100px] pointer-events-none" />
-
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 sm:p-12 md:p-16 items-center">
-
-                    <div className="space-y-6 text-white text-left">
-                      <span className="text-[#67b32f] font-black text-xs uppercase tracking-widest">Featured Portal Platform</span>
-                      <h3 className="text-3xl sm:text-4xl font-black tracking-tight">
-                        Arqelion Security Ecosystem
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed font-medium">
-                        A custom high-integrity application built for automated and verified student check-in/out tracking. Features multi-factor security logs, immediate notification triggers, and live administrative auditing.
-                      </p>
-
-                      <div className="space-y-3 font-semibold text-sm">
-                        <div className="flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-[#67b32f]" />
-                          <span>Automated parent SMS alert mechanisms</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-[#67b32f]" />
-                          <span>Biometric integrations & identity verification</span>
-                        </div>
-                      </div>
-
-                      <div className="pt-4 flex flex-wrap gap-4">
-                        <Button
-                          onClick={() => handleTabChange("solutions")}
-                          className="px-6 py-3 rounded-full text-sm font-bold bg-[#67b32f] text-white hover:bg-white hover:text-[#0b294f] transition-all duration-300 flex items-center gap-2 h-auto"
-                        >
-                          View Solution Details <ArrowUpRight className="w-4 h-4" />
-                        </Button>
-                      </div>
-
-                    </div>
-
-                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 space-y-4 text-left">
-                      <div className="flex justify-between items-center">
-                        <span className="text-xs font-mono text-[#67b32f]">PORTAL_STATUS: ACTIVE</span>
-                        <div className="w-2.5 h-2.5 rounded-full bg-[#67b32f]" />
-                      </div>
-
-                      <div className="space-y-2">
-                        <div className="h-2 w-3/4 bg-white/20 rounded" />
-                        <div className="h-2 w-1/2 bg-white/20 rounded" />
-                        <div className="h-2 w-5/6 bg-white/20 rounded" />
-                      </div>
-
-                      <div className="border-t border-white/10 pt-4 grid grid-cols-2 gap-4">
-                        <div>
-                          <p className="text-[10px] text-gray-400 font-bold uppercase">Integrity Score</p>
-                          <p className="text-xl font-bold text-white">99.98%</p>
-                        </div>
-                        <div>
-                          <p className="text-[10px] text-gray-400 font-bold uppercase">Actions Tracked</p>
-                          <p className="text-xl font-bold text-white">150K+</p>
-                        </div>
-                      </div>
-
-                      <div className="p-3 bg-white/5 rounded-xl border border-white/5 text-xs text-gray-300 font-mono">
-                        "Secure movement streams locked dynamically."
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </section>
 
@@ -903,6 +872,65 @@ export default function HomePage() {
                 ))}
               </div>
 
+              {/* WHY BE A PARTNER SECTION */}
+              <div className="mt-24 pt-16 border-t border-gray-100 text-left">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                  <div className="lg:col-span-5 space-y-6">
+                    <span className="text-xs font-black tracking-widest text-[#67b32f] uppercase">Ecosystem Expansion</span>
+                    <h3 className="text-3xl lg:text-4xl font-black text-[#0b294f] tracking-tight">
+                      Why Be a Partner with TR3-G Innovations?
+                    </h3>
+                    <p className="text-sm text-gray-500 font-semibold leading-relaxed">
+                      We bridge the gap between complex software systems and context-relevant institutional deployment. Partnering with us offers a reliable path to strategic innovation and market reach.
+                    </p>
+                    <div className="pt-2">
+                      <Button
+                        onClick={() => handleTabChange("contact")}
+                        className="px-6 py-3 rounded-full text-xs font-bold text-white bg-[#0b294f] hover:bg-[#67b32f] transition-all h-auto"
+                      >
+                        Initiate Alliance Talks <Handshake className="w-4 h-4 ml-1" />
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {[
+                      {
+                        icon: <Network className="w-6 h-6 text-[#67b32f]" />,
+                        title: "High-Tier Public Trust",
+                        desc: "Connect your core products to validated Ogun State revenue (OGIRS) and federal education pipelines with verified deployment protocols."
+                      },
+                      {
+                        icon: <Cpu className="w-6 h-6 text-[#67b32f]" />,
+                        title: "Custom Integration Sync",
+                        desc: "Our full-stack engineers design native wrappers, custom biometric layers, and automated triggers to sync your platform seamlessly."
+                      },
+                      {
+                        icon: <Shield className="w-6 h-6 text-[#67b32f]" />,
+                        title: "Bulletproof Security SLA",
+                        desc: "Every partnership integration is backed by audited cryptographic layers, automated intrusion monitoring, and complete zero-trust access loops."
+                      },
+                      {
+                        icon: <Zap className="w-6 h-6 text-[#67b32f]" />,
+                        title: "Agile Scale Velocity",
+                        desc: "Fast-track your solution's rollout with a dedicated project manager coordinating high-fidelity iterations and rapid server scaling."
+                      }
+                    ].map((ben, bIdx) => (
+                      <div
+                        key={bIdx}
+                        className="p-6 rounded-2xl bg-gray-50/50 border border-gray-100 hover:bg-white hover:shadow-lg transition-all"
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-gray-100 shadow-sm mb-4">
+                          {ben.icon}
+                        </div>
+                        <h4 className="font-bold text-[#0b294f] mb-1.5">{ben.title}</h4>
+                        <p className="text-xs text-gray-500 font-semibold leading-relaxed">{ben.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
             </div>
           </section>
         )}
@@ -912,7 +940,7 @@ export default function HomePage() {
           <section className="py-20 bg-gray-50/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start text-left mb-16">
 
                 {/* Contact Info and Details */}
                 <div className="lg:col-span-5 space-y-8">
@@ -1068,6 +1096,26 @@ export default function HomePage() {
                   </div>
                 </div>
 
+              </div>
+
+              {/* MAP ADDED DIRECTLY UNDER THE CONTACT FORM */}
+              <div className="mt-16 text-left space-y-6">
+                <div className="space-y-2">
+                  <span className="text-xs font-black tracking-widest text-[#67b32f] uppercase">Geographical Core</span>
+                  <h3 className="text-2xl font-black text-[#0b294f]">Our Nigeria Operations Map</h3>
+                  <p className="text-sm text-gray-500 font-semibold max-w-xl">
+                    Our developers and project managers coordinate from our primary operations base in Abuja to guarantee seamless tech system rollouts across West Africa.
+                  </p>
+                </div>
+                <div className="rounded-3xl overflow-hidden border border-gray-200 shadow-xl h-96 relative bg-gray-100">
+                  <iframe
+                    src={contactDetails.mapUrl}
+                    className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
+                    allowFullScreen
+                    loading="lazy"
+                    title="TR3-G Abuja Base Map"
+                  />
+                </div>
               </div>
 
             </div>
