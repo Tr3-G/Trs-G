@@ -735,7 +735,7 @@ export default function HomePage() {
                   className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-md mb-12 text-left grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
                 >
                   <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
-                    <div className="w-24 h-24 rounded-2xl bg-[#0b294f]/10 flex items-center justify-center border-2 border-[#67b32f] overflow-hidden">
+                    <div className="w-48 h-48 rounded-2xl bg-[#0b294f]/10 flex items-center justify-center border-2 border-[#67b32f] overflow-hidden">
                       <Image src={member.image || "/tr3-g.png"} width={100} height={100} className="w-48" alt="alternative text" />
                     </div>
                     <div>
@@ -774,7 +774,7 @@ export default function HomePage() {
                   >
                     <div className="space-y-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 text-gray-400 overflow-hidden">
+                        <div className="w-24 h-24 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 text-gray-400 overflow-hidden">
                           <Image src={member.image || "/tr3-g.png"} width={100} height={100} className="w-36" alt="alternative text" />
                         </div>
                         <div>

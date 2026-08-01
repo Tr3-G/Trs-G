@@ -146,7 +146,7 @@ export const team: TeamMember[] = [
     role: "Head of Full Stack",
     description: "Full stack design and interface engineer specializing in high-performance frontends and beautiful modern UX systems.",
     skills: ["Frontend UI Systems", "Responsive Architecture", "UI/UX Modeling", "Tailwind CSS"],
-    image: "/gh-2.jpeg"
+    image: "/gh-2.png"
   }
 ];
 
