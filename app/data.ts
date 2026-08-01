@@ -11,6 +11,7 @@ export interface TeamMember {
   quote?: string;
   description: string;
   skills: string[];
+  image?: string;
 }
 
 export interface Solution {
