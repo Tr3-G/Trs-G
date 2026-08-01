@@ -121,15 +121,7 @@ export default function HomePage() {
 
             {/* Logo Section */}
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleTabChange("home")}>
-              <div className="w-10 h-10 rounded-xl bg-[#0b294f] flex items-center justify-center shadow-lg shadow-[#0b294f]/15 border-2 border-[#67b32f]">
-                <span className="text-white font-extrabold text-base tracking-widest">T3</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tight text-[#0b294f] flex items-center gap-1 leading-none">
-                  TR3-G <span className="text-[#67b32f]">.</span>
-                </span>
-                <span className="text-[10px] font-bold text-gray-400 tracking-wider">INNOVATIONS</span>
-              </div>
+              <Image src="/tr3-g.png" width={100} height={100} className="w-24" />
             </div>
 
             {/* Desktop Navigation Link Tabs: Modeled after Chrivon's navigation design */}
@@ -1131,25 +1123,7 @@ export default function HomePage() {
 
             {/* Column 1: Info and logo */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleTabChange("home")}>
-                <div className="w-10 h-10 rounded-xl bg-[#0b294f] flex items-center justify-center border-2 border-[#67b32f]">
-                  <span className="text-white font-extrabold text-base tracking-widest">T3</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xl font-black tracking-tight text-[#0b294f] leading-none">
-                    TR3-G Innovations
-                  </span>
-                  <span className="text-[10px] font-bold text-gray-400 tracking-wider">DEVELOPED FOR EXCELLENCE</span>
-                </div>
-              </div>
-              <p className="text-sm text-gray-500 font-semibold leading-relaxed max-w-sm">
-                Developing next-generation digital foundations for global leaders. Our tech solutions are engineered for complete operational agility and structural resilience.
-              </p>
-              <div className="flex items-center gap-4 text-xs font-black text-gray-400 uppercase tracking-widest">
-                <span>Active Core: v4.2</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#67b32f]" />
-                <span>Abuja Hub</span>
-              </div>
+              <Image src="/tr3-g.png" width={100} height={100} className="w-24" />
             </div>
 
             {/* Column 2: Quick Links */}
