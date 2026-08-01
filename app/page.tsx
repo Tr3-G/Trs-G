@@ -121,7 +121,7 @@ export default function HomePage() {
 
             {/* Logo Section */}
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleTabChange("home")}>
-              <Image src="/tr3-g.png" width={100} height={100} className="w-24" />
+              <Image src="/tr3-g.png" width={100} height={100} className="w-24" alt="alternative text" />
             </div>
 
             {/* Desktop Navigation Link Tabs: Modeled after Chrivon's navigation design */}
@@ -1123,7 +1123,7 @@ export default function HomePage() {
 
             {/* Column 1: Info and logo */}
             <div className="lg:col-span-2 space-y-6">
-              <Image src="/tr3-g.png" width={100} height={100} className="w-24" />
+              <Image src="/tr3-g.png" width={100} height={100} className="w-24" alt="alternative text" />
             </div>
 
             {/* Column 2: Quick Links */}
