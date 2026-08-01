@@ -37,6 +37,7 @@ import {
   Network,
   Cpu
 } from "lucide-react";
+import Image from "next/image"
 
 // Import HeroUI v3 components directly
 import { Button } from "@heroui/react";
