@@ -102,43 +102,50 @@ export const team: TeamMember[] = [
     role: "MD / CEO",
     quote: "At TR3-G, we don't just build infrastructure; we develop the modern future of enterprise scale. Our mission is to bridge the gap between today's legacy constraints and tomorrow's limitless potential.",
     description: "Lead visionary and strategist orchestrating high-tier digital infrastructures across West Africa and global networks.",
-    skills: ["Enterprise Architecture", "Strategic Leadership", "GovTech Transformation", "Distributed Infrastructure"]
+    skills: ["Enterprise Architecture", "Strategic Leadership", "GovTech Transformation", "Distributed Infrastructure"],
+    image: "/ceo.jpeg"
   },
   {
     name: "Babarinde Oluwaseyi",
     role: "CTO",
     description: "Leading our technical vision, software engineering squads, and designing high-integrity distributed systems.",
-    skills: ["Cloud Engineering", "Distributed Databases", "System Architecture", "AI Automation"]
+    skills: ["Cloud Engineering", "Distributed Databases", "System Architecture", "AI Automation"],
+    image: "/cto.webp"
   },
   {
     name: "Adeboyega Adebowale Aiyemomi",
     role: "CFO",
     description: "Strategizing financial growth, resource optimization, and ensuring sustainable investment in next-generation technologies.",
-    skills: ["Financial Strategy", "Tech Valuations", "Capital Resource Planning", "Risk Mitigation"]
+    skills: ["Financial Strategy", "Tech Valuations", "Capital Resource Planning", "Risk Mitigation"],
+    image: "/cfo.jpeg"
   },
   {
     name: "Abimbola Deji Fadare",
     role: "Group Administrator",
     description: "Maintaining operational excellence, corporate governance, compliance protocols, and strategic organizational alignment.",
-    skills: ["Corporate Operations", "Governance", "HR Strategy", "Public-Private Partnerships"]
+    skills: ["Corporate Operations", "Governance", "HR Strategy", "Public-Private Partnerships"],
+    image: "/ga.jpeg"
   },
   {
     name: "Engr Clement John",
     role: "Group Project Manager",
     description: "Orchestrating complex software delivery pipelines and infrastructure deployments across the global digital core.",
-    skills: ["Agile Management", "Infrastructure Rollouts", "SDLC Oversight", "KPI Tracking"]
+    skills: ["Agile Management", "Infrastructure Rollouts", "SDLC Oversight", "KPI Tracking"],
+    image: "/gpm.jpeg"
   },
   {
     name: "Taiwo Oyetade Solomon",
     role: "Head of Full Stack",
     description: "Full stack engineering expert specializing in robust backends, database scaling, and secure API integrations.",
-    skills: ["React / Next.js", "Node.js", "Enterprise Database Scaling", "Secure Integrations"]
+    skills: ["React / Next.js", "Node.js", "Enterprise Database Scaling", "Secure Integrations"],
+    image: "/gh-1.jpg"
   },
   {
     name: "Kehinde Oyetade David",
     role: "Head of Full Stack",
     description: "Full stack design and interface engineer specializing in high-performance frontends and beautiful modern UX systems.",
-    skills: ["Frontend UI Systems", "Responsive Architecture", "UI/UX Modeling", "Tailwind CSS"]
+    skills: ["Frontend UI Systems", "Responsive Architecture", "UI/UX Modeling", "Tailwind CSS"],
+    image: "/gh-2.jpeg"
   }
 ];
 

@@ -736,7 +736,7 @@ export default function HomePage() {
                 >
                   <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
                     <div className="w-24 h-24 rounded-2xl bg-[#0b294f]/10 flex items-center justify-center border-2 border-[#67b32f]">
-                      <User className="w-12 h-12 text-[#0b294f]" />
+                      <Image src={member.image} width={100} height={100} className="w-24" alt="alternative text" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-black text-[#0b294f]">{member.name}</h3>
@@ -775,7 +775,7 @@ export default function HomePage() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 text-gray-400">
-                          <User className="w-6 h-6 text-[#0b294f]" />
+                          <Image src={member.image} width={100} height={100} className="w-20" alt="alternative text" />
                         </div>
                         <div>
                           <h4 className="text-lg font-black text-[#0b294f]">{member.name}</h4>
@@ -1123,7 +1123,7 @@ export default function HomePage() {
 
             {/* Column 1: Info and logo */}
             <div className="lg:col-span-2 space-y-6">
-              <Image src="/tr3-g.png" width={100} height={100} className="w-24" alt="alternative text" />
+              <Image src="/tr3-g.png" width={100} height={100} className="w-48" alt="alternative text" />
             </div>
 
             {/* Column 2: Quick Links */}
