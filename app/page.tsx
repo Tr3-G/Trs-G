@@ -775,7 +775,7 @@ export default function HomePage() {
                     <div className="space-y-4">
                       <div className="flex items-center gap-4">
                         <div className="w-24 h-24 rounded-xl bg-gray-50 flex items-center justify-center border border-gray-100 text-gray-400 overflow-hidden">
-                          <Image src={member.image || "/tr3-g.png"} width={100} height={100} className="w-36" alt="alternative text" />
+                          <Image src={member.image || "/tr3-g.png"} width={100} height={100} className="w-36 object cover" alt="alternative text" />
                         </div>
                         <div>
                           <h4 className="text-lg font-black text-[#0b294f]">{member.name}</h4>
